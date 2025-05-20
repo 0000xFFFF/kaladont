@@ -1,0 +1,3 @@
+- copy "serbian-latin-lower-sort.txt"
+- removed 'ntv'
+- added 'kaladont'
