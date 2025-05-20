@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import sys
+
 
 with open("dicts/serb.txt", "r") as file:
     lines = [line.strip() for line in file.readlines()]
@@ -25,5 +27,6 @@ for x in valid:
 
     if not found:
         killer.add(x) 
-        print(x)
+        sys.stdout.write(f"{x}\n")
+        sys.stdout.flush()
 
