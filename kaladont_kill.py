@@ -16,7 +16,11 @@ for i in lines:
         valid.add(i)
 
 while True:
-    word = input("word: ").lower()
+    word = ""
+    try:
+        word = input("word: ").lower()
+    except KeyboardInterrupt:
+        break
     if not word:
         continue
 
