@@ -20,6 +20,7 @@ while True:
     try:
         word = input("word: ").lower()
     except KeyboardInterrupt:
+        print("\n\n")
         break
     if not word:
         continue
