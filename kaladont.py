@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 
-word = input("word: ")
-
-
 with open("dicts/serb.txt", "r") as file:
     lines = [line.strip() for line in file.readlines()]
 
@@ -13,18 +10,16 @@ for i in lines:
     if len(i) >= 3:
         valid.add(i)
 
-gameover = [
-    "nt",
-    "ih",
-    "ry",
-    "ao"
-]
-
 while True:
 
-#    if word[-2:] in gameover:
-#        print(">> game over.")
-#        exit(1)
+    word = ""
+    try:
+        word = input("word: ").lower()
+    except KeyboardInterrupt:
+        print("\n\n")
+        break
+    if not word:
+        continue
 
     for i in valid:
         if i.startswith(word[-2:]) and i not in used:
@@ -33,4 +28,4 @@ while True:
             used.add(i)
             continue
 
-    break
+    print(">> game over.")
